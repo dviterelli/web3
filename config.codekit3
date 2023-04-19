@@ -29,12 +29,28 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/deploy\/footer.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/footer.html",
+      "oF" : 0
+    },
     "\/deploy\/header.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/header.html",
+      "oF" : 0
+    },
+    "\/deploy\/hero.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/hero.html",
       "oF" : 0
     },
     "\/deploy\/img\/footer\/facebook-square-brands.svg" : {
@@ -130,6 +146,16 @@
       "ou" : "lpckwebp-default",
       "rq" : 75
     },
+    "\/deploy\/img\/global\/Arrow.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/global\/Arrow.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/header\/search.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -153,6 +179,17 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/deploy\/img\/hero\/foot-tool.webp" : {
+      "ft" : 8388608,
+      "iS" : 143238,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/hero\/foot-tool.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/deploy\/img\/hero\/vivo-header.jpg" : {
       "ft" : 16384,
       "iS" : 182641,
@@ -164,6 +201,17 @@
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/hero\/Why.webp" : {
+      "ft" : 8388608,
+      "iS" : 200238,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/hero\/Why.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/deploy\/img\/new\/bare-truth.jpg" : {
@@ -250,9 +298,9 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/dev\/content\/hero.html",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/deploy\/hero.html",
+      "oF" : 2
     },
     "\/dev\/global\/footer.kit" : {
       "cB" : 0,
@@ -266,25 +314,25 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/global\/head.html",
-      "oF" : 0
+      "oA" : 0,
+      "oAP" : "\/deploy\/head.html",
+      "oF" : 3
     },
     "\/dev\/global\/header.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/deploy\/header.html",
-      "oF" : 2
+      "oF" : 3
     },
     "\/dev\/global\/scripts.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/global\/scripts.html",
-      "oF" : 0
+      "oA" : 0,
+      "oAP" : "\/deploy\/scripts.html",
+      "oF" : 3
     },
     "\/dev\/index.kit" : {
       "cB" : 0,
