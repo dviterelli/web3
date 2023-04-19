@@ -4,140 +4,18 @@
     {
       "name" : "Process All Remaining Files and Folders",
       "stepType" : 1,
-      "uuidString" : "2F66EE1A-F279-4304-A82B-AC408D0A71EE"
+      "uuidString" : "4E301350-858D-47A2-ADAA-59DBC03EF760"
     }
   ],
   "creatorBuild" : "34472",
   "files" : {
-    "\/assets\/about-left.jpg" : {
-      "ft" : 16384,
-      "iS" : 240900,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/about-left.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/about.jpg" : {
-      "ft" : 16384,
-      "iS" : 252641,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/about.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/Andriod.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/Andriod.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/Apple.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/Apple.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/aws.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/aws.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/Google.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/Google.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/hero-2.jpg" : {
-      "ft" : 16384,
-      "iS" : 1003073,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/hero-2.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/hero.jpg" : {
-      "ft" : 16384,
-      "iS" : 479600,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/hero.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/In-class-S23.fig" : {
+    "\/Assets\/In-class-S23.fig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/In-class-S23.fig",
+      "oAP" : "\/Assets\/In-class-S23.fig",
       "oF" : 0
-    },
-    "\/assets\/logo.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/logo.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/MS.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/MS.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/reddit.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/reddit.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
     },
     "\/deploy\/css\/styles.css" : {
       "aP" : 1,
@@ -394,11 +272,11 @@
 
   },
   "projectAttributes" : {
-    "creationDate" : 702560800.42181301,
-    "displayValue" : "InClass-Demo-S23",
-    "displayValueWasSetByUser" : 0,
-    "iconImageName" : "brackets_gray",
-    "iconImageWasSetByUser" : 0
+    "creationDate" : 701700550.43463695,
+    "displayValue" : "Web-3-Homework-S23",
+    "displayValueWasSetByUser" : 1,
+    "iconImageName" : "meme-ron",
+    "iconImageWasSetByUser" : 1
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
