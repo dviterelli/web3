@@ -310,6 +310,14 @@
       "oAP" : "\/deploy\/hero.html",
       "oF" : 2
     },
+    "\/dev\/content\/new.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/new.html",
+      "oF" : 0
+    },
     "\/dev\/content\/new.kit" : {
       "cB" : 0,
       "ft" : 2048,
