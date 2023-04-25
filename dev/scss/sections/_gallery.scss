@@ -3,5 +3,11 @@
 ============= */
 
 #gallery{
+   display: grid;
+   grid-template-columns: 16px auto 16px;
+   grid-template-areas: ". gallery . ";
 
+   >div{
+       grid-area: gallery;
+   }
 }
