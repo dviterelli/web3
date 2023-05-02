@@ -396,7 +396,7 @@ textarea {
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-columns: repeat(2);
-    grid-template-areas: "g1 g2" "g1 g2";
+    grid-template-areas: "g1 g2" "g1 g3";
   }
   #gallery > div ul li #g1 {
     grid-area: g1;
@@ -414,9 +414,6 @@ textarea {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". new . ";
 }
-#new > div {
-  grid-area: new;
-}
 #new > div ul {
   margin: 0;
   padding: 0;
@@ -424,7 +421,6 @@ textarea {
 @media (min-width: 768px) {
   #new > div ul {
     display: grid;
-    grid-template-columns: 50% auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
     gap: 16px;
@@ -432,7 +428,6 @@ textarea {
 }
 @media (min-width: 1024px) {
   #new > div ul {
-    grid-template-columns: 33.3%, 33.3%, auto;
     grid-template-columns: repeat(3);
     grid-template-areas: "n1 n1 n2 n2 n3 n3" ". n4 n4 n5 n5 .";
   }

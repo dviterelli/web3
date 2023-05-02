@@ -8,15 +8,12 @@
    grid-template-areas: ". new . ";
 
    >div{
-       grid-area: new;
-
        ul{
          margin:0 ;
          padding:0 ;
        
          @include md{
-            display:grid ;
-            grid-template-columns:50% auto;
+            display:grid; 
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
             "n1 n1 n2 n2"
@@ -26,7 +23,6 @@
          }
 
          @include lg{
-            grid-template-columns:33.3%, 33.3%, auto;
             grid-template-columns: repeat(3);
             grid-template-areas:
             "n1 n1 n2 n2 n3 n3"
