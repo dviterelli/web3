@@ -17,6 +17,66 @@
       "oAP" : "\/Assets\/VitelliD_4-11HW.fig",
       "oF" : 0
     },
+    "\/deploy\/css\/_base.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/deploy\/css\/_base-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/deploy\/css\/_footer.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/deploy\/css\/_footer-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/deploy\/css\/_gallery.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/deploy\/css\/_gallery-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/deploy\/css\/_header.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/deploy\/css\/_header-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/deploy\/css\/_new.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/deploy\/css\/_new-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/deploy\/css\/styles.css" : {
       "aP" : 1,
       "bl" : 0,

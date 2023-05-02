@@ -9,5 +9,31 @@
 
    >div{
        grid-area: gallery;
+
+       ul{
+         margin:0 ;
+         padding:0 ;
+
+         @include md{
+            display:grid ;
+            grid-template-columns:50% auto;
+            grid-template-columns: repeat(2);
+            grid-template-areas:
+            "g1 g2"
+            "g1 g2";
+            
+            li{
+   
+               #g1{
+                  grid-area: g1;
+               }
+               #g2{
+                  grid-area: g2;
+               }
+   
+   
+            }
+         }
+      }  
    }
 }

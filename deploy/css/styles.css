@@ -387,6 +387,24 @@ textarea {
 #gallery > div {
   grid-area: gallery;
 }
+#gallery > div ul {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  #gallery > div ul {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-columns: repeat(2);
+    grid-template-areas: "g1 g2" "g1 g2";
+  }
+  #gallery > div ul li #g1 {
+    grid-area: g1;
+  }
+  #gallery > div ul li #g2 {
+    grid-area: g2;
+  }
+}
 
 /* =============
    New
@@ -398,4 +416,35 @@ textarea {
 }
 #new > div {
   grid-area: new;
+}
+#new > div ul {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  #new > div ul {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
+    gap: 16px;
+  }
+  #new > div ul li {
+    list-style: none;
+  }
+  #new > div ul li #n1 {
+    grid-area: n1;
+  }
+  #new > div ul li #n2 {
+    grid-area: n2;
+  }
+  #new > div ul li #n3 {
+    grid-area: n3;
+  }
+  #new > div ul li #n4 {
+    grid-area: n4;
+  }
+  #new > div ul li #n5 {
+    grid-area: n5;
+  }
 }
