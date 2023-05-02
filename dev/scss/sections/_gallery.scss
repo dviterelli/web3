@@ -15,7 +15,7 @@
          padding:0 ;
 
          @include md{
-            display:grid ;
+            display:grid;
             grid-template-columns:50% auto;
             grid-template-columns: repeat(2);
             grid-template-areas:
@@ -30,8 +30,6 @@
                #g2{
                   grid-area: g2;
                }
-   
-   
             }
          }
       }  

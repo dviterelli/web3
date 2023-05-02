@@ -429,22 +429,29 @@ textarea {
     grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
     gap: 16px;
   }
-  #new > div ul li {
-    list-style: none;
+}
+@media (min-width: 1024px) {
+  #new > div ul {
+    grid-template-columns: 33.3%, 33.3%, auto;
+    grid-template-columns: repeat(3);
+    grid-template-areas: "n1 n1 n2 n2 n3 n3" ". n4 n4 n5 n5 .";
   }
-  #new > div ul li #n1 {
-    grid-area: n1;
-  }
-  #new > div ul li #n2 {
-    grid-area: n2;
-  }
-  #new > div ul li #n3 {
-    grid-area: n3;
-  }
-  #new > div ul li #n4 {
-    grid-area: n4;
-  }
-  #new > div ul li #n5 {
-    grid-area: n5;
-  }
+}
+#new > div ul li {
+  list-style: none;
+}
+#new > div ul li #n1 {
+  grid-area: n1;
+}
+#new > div ul li #n2 {
+  grid-area: n2;
+}
+#new > div ul li #n3 {
+  grid-area: n3;
+}
+#new > div ul li #n4 {
+  grid-area: n4;
+}
+#new > div ul li #n5 {
+  grid-area: n5;
 }

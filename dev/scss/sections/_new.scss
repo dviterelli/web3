@@ -23,25 +23,33 @@
             "n3 n3 n4 n4"
             ". n5 n5 ." ;
             gap: 16px;
-            
-            li{
-               list-style: none;
-               
-               #n1{
-                  grid-area: n1;
-               }
-               #n2{
-                  grid-area: n2;
-               }
-               #n3{
-                  grid-area: n3;
-               }
-               #n4{
-                  grid-area: n4;
-               }
-               #n5{
-                  grid-area: n5;
-               }
+         }
+
+         @include lg{
+            grid-template-columns:33.3%, 33.3%, auto;
+            grid-template-columns: repeat(3);
+            grid-template-areas:
+            "n1 n1 n2 n2 n3 n3"
+            ". n4 n4 n5 n5 ." 
+         }
+
+         li{
+            list-style: none;
+
+            #n1{
+               grid-area: n1;
+            }
+            #n2{
+               grid-area: n2;
+            }
+            #n3{
+               grid-area: n3;
+            }
+            #n4{
+               grid-area: n4;
+            }
+            #n5{
+               grid-area: n5;
             }
          }
       }
