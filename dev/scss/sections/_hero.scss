@@ -3,5 +3,54 @@
 ============= */
 
 #hero{
-   
+
+   img{
+       font-size: 0;
+       display: block;
+   }
+
+   #hero-bottom{
+
+       @include md{
+           display: grid;
+           grid-template-columns: 40% auto;
+       }
+
+       @include lg{
+           grid-template-columns: 50% auto;
+       }
+
+       .hero-bottom-card{
+           display: grid;
+           grid-template-columns: 16px auto 16px;
+           grid-template-areas: ". hero-sub .";
+           padding: 16px 0;
+
+           >div{
+               grid-area: hero-sub;
+               display: flex;
+               align-items: center;
+
+               aside{
+                   margin-left: auto;
+
+                   a{
+                       display: flex;
+                   }
+               }
+           }
+       }
+
+       #hero-bottom-left{
+           @include xxl{
+               grid-template-columns: 20% auto 16px;
+           }
+       }
+
+       #hero-bottom-right{
+           @include xxl{
+               grid-template-columns: 16px auto 20%;
+           }
+       }
+   }
 }

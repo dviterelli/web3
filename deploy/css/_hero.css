@@ -1,0 +1,26 @@
+/* =============
+   Hero
+============= */
+#hero section include md {
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+#hero section aside {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". hero-aside .";
+}
+#hero section aside > div {
+  grid-area: hero-aside;
+}
+
+#hero-sub .hero-sub-content {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". hero-subs .";
+}
+#hero-sub .hero-sub-content > div {
+  grid-area: hero-subs;
+  display: grid;
+  grid-template-columns: 50% auto;
+}

@@ -327,6 +327,14 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
 .header-footer-grid {
   display: grid;
   grid-template-columns: 16px auto 16px;
@@ -336,8 +344,21 @@ template {
   grid-area: header-footer;
 }
 
+.hero-sub-images {
+  width: 15%;
+}
+
 .large-images {
   width: 100%;
+}
+
+.show-large {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .show-large {
+    display: block;
+  }
 }
 
 /* =============
@@ -370,83 +391,276 @@ textarea {
 /* =============
     Header
 ============= */
+header #logo-nav {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". logo-nav .";
+}
+header #logo-nav > div {
+  grid-area: logo-nav;
+}
+header #search {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". search .";
+}
+header #search > div {
+  grid-area: search;
+}
 /* =============
     Footer
 ============= */
+footer {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". footer .";
+  padding: 24px 0;
+}
+@media (min-width: 1440px) {
+  footer {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+footer > div {
+  grid-area: footer;
+}
+@media (min-width: 768px) {
+  footer > div {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "f1 f2" "f1 f3";
+    gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  footer > div {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "f1 f2 f3";
+  }
+}
+footer > div #f1 {
+  color: var(--blueInput);
+}
+@media (min-width: 768px) {
+  footer > div #f1 {
+    grid-area: f1;
+  }
+}
+footer > div #f1 section {
+  display: flex;
+}
+footer > div #f1 section i {
+  color: var(--red);
+  font-size: 1.25rem;
+  margin-right: 16px;
+}
+@media (min-width: 768px) {
+  footer > div #f2 {
+    grid-area: f2;
+  }
+}
+footer > div #f2 form input {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  padding: 16px 8px;
+}
+footer > div #f2 form div {
+  text-align: right;
+}
+footer > div #f2 form div button {
+  margin-top: 16px;
+  border: none;
+}
+@media (min-width: 768px) {
+  footer > div #f3 {
+    grid-area: f3;
+  }
+}
+@media (min-width: 1024px) {
+  footer > div #f3 {
+    text-align: right;
+  }
+}
+footer > div #f3 ul {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  footer > div #f3 ul {
+    justify-content: flex-end;
+  }
+}
+footer > div #f3 ul li {
+  margin-right: 16px;
+}
 /* =============
    Hero
 ============= */
+#hero img {
+  font-size: 0;
+  display: block;
+}
+@media (min-width: 768px) {
+  #hero #hero-bottom {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+}
+@media (min-width: 1024px) {
+  #hero #hero-bottom {
+    grid-template-columns: 50% auto;
+  }
+}
+#hero #hero-bottom .hero-bottom-card {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". hero-sub .";
+  padding: 16px 0;
+}
+#hero #hero-bottom .hero-bottom-card > div {
+  grid-area: hero-sub;
+  display: flex;
+  align-items: center;
+}
+#hero #hero-bottom .hero-bottom-card > div aside {
+  margin-left: auto;
+}
+#hero #hero-bottom .hero-bottom-card > div aside a {
+  display: flex;
+}
+@media (min-width: 1440px) {
+  #hero #hero-bottom #hero-bottom-left {
+    grid-template-columns: 20% auto 16px;
+  }
+}
+@media (min-width: 1440px) {
+  #hero #hero-bottom #hero-bottom-right {
+    grid-template-columns: 16px auto 20%;
+  }
+}
+
 /* =============
    Gallery
 ============= */
-#gallery {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". gallery . ";
+@media (min-width: 1024px) {
+  #gallery {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". gallery .";
+  }
 }
-#gallery > div {
-  grid-area: gallery;
-}
-#gallery > div ul {
-  margin: 0;
-  padding: 0;
+@media (min-width: 1440px) {
+  #gallery {
+    grid-template-columns: auto 1200px auto;
+  }
 }
 @media (min-width: 768px) {
-  #gallery > div ul {
+  #gallery ul {
+    grid-area: gallery;
     display: grid;
     grid-template-columns: 50% auto;
-    grid-template-columns: repeat(2);
+  }
+}
+@media (min-width: 1024px) {
+  #gallery ul {
+    grid-template-columns: 60% auto;
+  }
+}
+@media (min-width: 1440px) {
+  #gallery ul {
     grid-template-areas: "g1 g2" "g1 g3";
   }
-  #gallery > div ul li #g1 {
+}
+@media (min-width: 1440px) {
+  #gallery ul #g1 {
     grid-area: g1;
   }
-  #gallery > div ul li #g2 {
+}
+@media (min-width: 1440px) {
+  #gallery ul #g2 {
     grid-area: g2;
+  }
+}
+@media (min-width: 1440px) {
+  #gallery ul #g3 {
+    grid-area: g3;
   }
 }
 
 /* =============
    New
 ============= */
-#new {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". new . ";
+@media (min-width: 768px) {
+  #new {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". new .";
+  }
 }
-#new > div ul {
-  margin: 0;
-  padding: 0;
+@media (min-width: 1440px) {
+  #new {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#new > div {
+  display: grid;
+  gap: 16px;
 }
 @media (min-width: 768px) {
-  #new > div ul {
-    display: grid;
+  #new > div {
+    grid-area: new;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
-    gap: 16px;
   }
 }
 @media (min-width: 1024px) {
-  #new > div ul {
-    grid-template-columns: repeat(3);
+  #new > div {
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "n1 n1 n2 n2 n3 n3" ". n4 n4 n5 n5 .";
   }
 }
-#new > div ul li {
-  list-style: none;
+@media (min-width: 768px) {
+  #new > div h1 {
+    grid-area: nt;
+  }
 }
-#new > div ul li #n1 {
-  grid-area: n1;
+#new > div section img {
+  width: 100%;
+  font-size: 0;
+  display: block;
 }
-#new > div ul li #n2 {
-  grid-area: n2;
+#new > div section .card-data {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". card-data .";
+  padding: 16px 0;
 }
-#new > div ul li #n3 {
-  grid-area: n3;
+#new > div section .card-data > div {
+  grid-area: card-data;
 }
-#new > div ul li #n4 {
-  grid-area: n4;
+@media (min-width: 768px) {
+  #new > div #n1 {
+    grid-area: n1;
+  }
 }
-#new > div ul li #n5 {
-  grid-area: n5;
+@media (min-width: 768px) {
+  #new > div #n2 {
+    grid-area: n2;
+  }
+}
+@media (min-width: 768px) {
+  #new > div #n3 {
+    grid-area: n3;
+  }
+}
+@media (min-width: 768px) {
+  #new > div #n4 {
+    grid-area: n4;
+  }
+}
+@media (min-width: 768px) {
+  #new > div #n5 {
+    grid-area: n5;
+  }
 }

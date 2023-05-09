@@ -1,7 +1,13 @@
 /* =============
     Base
 ============= */
-
+ul{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none
+    }
+}
 
 
 
@@ -15,6 +21,18 @@
     }
 }
 
+.hero-sub-images{
+    width: 15%;
+}
+
 .large-images{
     width: 100%;
+}
+
+.show-large {
+    display: none;
+
+    @include lg{
+        display: block;
+    }
 }

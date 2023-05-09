@@ -3,5 +3,100 @@
 ============= */
 
 footer{
-    
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". footer .";
+    padding: 24px 0;
+
+    @include xxl{
+        grid-template-columns: auto 1200px auto;
+    }
+
+    >div{
+        grid-area: footer;
+
+        @include md{
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: 
+            "f1 f2"
+            "f1 f3";
+            gap: 16px;
+        }
+
+        @include lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "f1 f2 f3";
+        }
+
+        #f1{
+            color: var(--blueInput);
+            @include md{
+                grid-area: f1;
+            }
+
+            h1{
+
+            }
+
+            section{
+                display: flex;
+
+                i{
+                    color: var(--red);
+                    font-size: rem-calc(20);
+                    margin-right: 16px;
+                }
+            }
+        }   
+
+        #f2{
+            @include md{
+                grid-area: f2;
+            }
+
+            form{
+                input{
+                    width: 100%;
+                    border-radius: 0;
+                    border: none;
+                    box-sizing: border-box;
+                    padding: 16px 8px;
+                }
+
+                div{
+                    text-align: right;
+                    button{
+                        margin-top: 16px;
+                        border: none;
+                    }
+                }
+            }
+        } 
+
+        #f3{
+            
+            @include md{
+                grid-area: f3;
+            }
+
+            @include lg{
+                text-align: right;
+            }
+
+            ul{
+                display: flex;
+                @include lg{
+                    justify-content: flex-end;
+
+                }
+                li{
+                    margin-right: 16px;
+                    a{
+                    }
+                }
+            }
+        } 
+    }
 }

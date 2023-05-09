@@ -3,51 +3,88 @@
 ============= */
 
 #new{
-   display: grid;
-   grid-template-columns: 16px auto 16px;
-   grid-template-areas: ". new . ";
+   @include md{
+       display: grid;
+       grid-template-columns: 16px auto 16px;
+       grid-template-areas: ". new .";
+   }
+
+   @include xxl{
+       grid-template-columns: auto 1200px auto;
+   }
 
    >div{
-       ul{
-         margin:0 ;
-         padding:0 ;
-       
-         @include md{
-            display:grid; 
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-areas:
-            "n1 n1 n2 n2"
-            "n3 n3 n4 n4"
-            ". n5 n5 ." ;
-            gap: 16px;
-         }
+       display: grid;
+       gap: 16px;
 
-         @include lg{
-            grid-template-columns: repeat(3);
-            grid-template-areas:
-            "n1 n1 n2 n2 n3 n3"
-            ". n4 n4 n5 n5 ." 
-         }
+       @include md{
+           grid-area: new;
+           grid-template-columns: repeat(4, 1fr);
+           grid-template-areas:
+           "n1 n1 n2 n2"
+           "n3 n3 n4 n4"
+           ". n5 n5 .";
+       }
 
-         li{
-            list-style: none;
+       @include lg{
+           grid-template-columns: repeat(6, 1fr);
+           grid-template-areas:  
+           "n1 n1 n2 n2 n3 n3"
+           ". n4 n4 n5 n5 .";
+       }
 
-            #n1{
+       h1{
+           @include md{
+               grid-area: nt;
+           }
+       }
+
+       section{
+           img{
+               width: 100%;
+               font-size: 0;
+               display: block;
+           }
+
+           .card-data{
+               display: grid;
+               grid-template-columns: 16px auto 16px;
+               grid-template-areas: ". card-data .";
+               padding: 16px 0;
+               >div{
+                   grid-area: card-data;
+               }
+           }
+       }
+
+       #n1{
+           @include md{
                grid-area: n1;
-            }
-            #n2{
+           }
+       }
+
+       #n2{
+           @include md{
                grid-area: n2;
-            }
-            #n3{
+           }
+       }
+       
+       #n3{
+           @include md{
                grid-area: n3;
-            }
-            #n4{
+           }
+       }
+
+       #n4{
+           @include md{
                grid-area: n4;
-            }
-            #n5{
+           }
+       }
+
+       #n5{
+           @include md{
                grid-area: n5;
-            }
-         }
-      }
+           }
+       }
    }
 }

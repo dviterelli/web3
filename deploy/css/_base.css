@@ -1,6 +1,14 @@
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
 .header-footer-grid {
   display: grid;
   grid-template-columns: 16px auto 16px;
@@ -8,6 +16,10 @@
 }
 .header-footer-grid > div {
   grid-area: header-footer;
+}
+
+.hero-sub-images {
+  width: 15%;
 }
 
 .large-images {
