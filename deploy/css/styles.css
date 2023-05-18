@@ -13,6 +13,8 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --red-light: #B15F6C;
+  --red-dark: #9B2236;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -335,21 +337,18 @@ ul li {
   list-style: none;
 }
 
-.header-footer-grid {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". header-footer . ";
+.content-space-top {
+  margin-top: 16px;
 }
-.header-footer-grid > div {
-  grid-area: header-footer;
+@media (min-width: 768px) {
+  .content-space-top {
+    margin-top: 24px;
+  }
 }
-
-.hero-sub-images {
-  width: 15%;
-}
-
-.large-images {
-  width: 100%;
+@media (min-width: 1024px) {
+  .content-space-top {
+    margin-top: 30px;
+  }
 }
 
 .show-large {
@@ -361,12 +360,57 @@ ul li {
   }
 }
 
+.show-extra-large {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .show-extra-large {
+    display: block;
+  }
+}
+
+.test-imgs {
+  width: 100%;
+}
+
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
+.red-link:link, .red-link:visited {
+  background-color: var(--red-dark);
+  color: white;
+  padding: 8px 16px;
+  display: inline-block;
+  transition: 0.25s;
+}
+.red-link:link:hover, .red-link:visited:hover {
+  background-color: var(--red-light);
+}
+
+.red-button {
+  background-color: var(--red-dark);
+  color: white;
+  padding: 8px 16px;
+  display: inline-block;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.red-button:hover {
+  background-color: var(--red-light);
+}
+
 /* =============
     Forms
 ============= */
@@ -399,6 +443,9 @@ header #logo-nav {
 header #logo-nav > div {
   grid-area: logo-nav;
 }
+header #logo-nav > div img {
+  width: 300px;
+}
 header #search {
   display: grid;
   grid-template-columns: 16px auto 16px;
@@ -415,6 +462,8 @@ footer {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". footer .";
   padding: 24px 0;
+  background-color: var(--black);
+  color: var(--white);
 }
 @media (min-width: 1440px) {
   footer {
@@ -497,9 +546,27 @@ footer > div #f3 ul li {
 /* =============
    Hero
 ============= */
-#hero img {
-  font-size: 0;
-  display: block;
+#hero #hero-img {
+  background-image: url("../img/hero/vivo-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
+@media (min-width: 768px) {
+  #hero #hero-img {
+    height: 50vh;
+  }
+}
+@media (min-width: 1200px) {
+  #hero #hero-img {
+    background-position: center 80%;
+    height: 65vh;
+  }
+}
+@media (min-width: 1440px) {
+  #hero #hero-img {
+    height: 70vh;
+  }
 }
 @media (min-width: 768px) {
   #hero #hero-bottom {
@@ -516,6 +583,7 @@ footer > div #f3 ul li {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". hero-sub .";
+  color: white;
   padding: 16px 0;
 }
 #hero #hero-bottom .hero-bottom-card > div {
@@ -526,23 +594,128 @@ footer > div #f3 ul li {
 #hero #hero-bottom .hero-bottom-card > div aside {
   margin-left: auto;
 }
-#hero #hero-bottom .hero-bottom-card > div aside a {
+#hero #hero-bottom .hero-bottom-card > div aside a:link, #hero #hero-bottom .hero-bottom-card > div aside a:visited {
   display: flex;
+  color: white;
+  transition: 0.25s;
+}
+#hero #hero-bottom .hero-bottom-card > div aside a:link:hover, #hero #hero-bottom .hero-bottom-card > div aside a:link:active, #hero #hero-bottom .hero-bottom-card > div aside a:visited:hover, #hero #hero-bottom .hero-bottom-card > div aside a:visited:active {
+  color: var(--red-dark);
+}
+#hero #hero-bottom #hero-bottom-left {
+  background-color: var(--red-dark);
 }
 @media (min-width: 1440px) {
   #hero #hero-bottom #hero-bottom-left {
-    grid-template-columns: 20% auto 16px;
+    grid-template-columns: 30% auto 16px;
   }
+}
+#hero #hero-bottom #hero-bottom-left h1 {
+  font-size: rme-calc(18);
+  margin-bottom: 8px;
+}
+@media (min-width: 1200px) {
+  #hero #hero-bottom #hero-bottom-left h1 {
+    font-size: rme-calc(25);
+  }
+}
+#hero #hero-bottom #hero-bottom-left p {
+  font-weight: 600;
+  font-size: rme-calc(14);
+}
+@media (min-width: 1200px) {
+  #hero #hero-bottom #hero-bottom-left p {
+    font-size: rme-calc(18);
+  }
+}
+#hero #hero-bottom #hero-bottom-right {
+  background-color: var(--red-light);
 }
 @media (min-width: 1440px) {
   #hero #hero-bottom #hero-bottom-right {
-    grid-template-columns: 16px auto 20%;
+    grid-template-columns: 16px auto 30%;
   }
 }
+#hero #hero-bottom #hero-bottom-right h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+#hero #hero-bottom #hero-bottom-right h3 span {
+  font-weight: 700;
+}
 
-/* =============
-   Gallery
-============= */
+@media (min-width: 768px) {
+  #sub-hero {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". sub-hero-cards .";
+  }
+}
+@media (min-width: 768px) and (min-width: 1440px) {
+  #sub-hero {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#sub-hero > div {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  #sub-hero > div {
+    grid-area: sub-hero-cards;
+    grid-template-columns: 50% auto;
+  }
+}
+#sub-hero > div .sub-hero-card {
+  background-color: var(--black);
+  padding: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
+}
+#sub-hero > div .sub-hero-card h1 {
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  #sub-hero > div .sub-hero-card h1 {
+    font-size: 1.875rem;
+  }
+}
+#sub-hero > div .sub-hero-card a {
+  margin-top: 8px;
+}
+#sub-hero > div .sub-hero-card aside {
+  margin-left: auto;
+  width: 35%;
+}
+@media (min-width: 576px) {
+  #sub-hero > div .sub-hero-card aside {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  #sub-hero > div .sub-hero-card aside {
+    width: 20%;
+  }
+}
+#sub-hero > div .sub-hero-card aside > div {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 100%;
+  border: 3px solid white;
+  overflow: hidden;
+}
+#sub-hero > div .sub-hero-card aside #sub-left-img {
+  background-image: url("../img/hero/foot-tool.webp");
+}
+#sub-hero > div .sub-hero-card aside #sub-right-img {
+  background-image: url("../img/hero/why.Webp");
+}
+
 @media (min-width: 1024px) {
   #gallery {
     display: grid;
@@ -555,11 +728,15 @@ footer > div #f3 ul li {
     grid-template-columns: auto 1200px auto;
   }
 }
+#gallery ul {
+  display: grid;
+  grid-template-rows: 50vh 76vh;
+}
 @media (min-width: 768px) {
   #gallery ul {
     grid-area: gallery;
-    display: grid;
     grid-template-columns: 50% auto;
+    grid-template-rows: 50vh;
   }
 }
 @media (min-width: 1024px) {
@@ -569,21 +746,38 @@ footer > div #f3 ul li {
 }
 @media (min-width: 1440px) {
   #gallery ul {
+    grid-template-rows: repeat(2, 30vh);
     grid-template-areas: "g1 g2" "g1 g3";
   }
+}
+#gallery ul li {
+  background-size: cover;
+  background-position: center;
+}
+#gallery ul #g1 {
+  background-image: url("../img/gallery/shop-mens.jpg.webp");
 }
 @media (min-width: 1440px) {
   #gallery ul #g1 {
     grid-area: g1;
   }
 }
+#gallery ul #g2 {
+  background-image: url("../img/gallery/shop-womens.jpg.webp");
+}
 @media (min-width: 1440px) {
   #gallery ul #g2 {
     grid-area: g2;
+    background-position: center;
   }
+}
+#gallery ul #g3 {
+  display: none;
+  background-image: url("../img/gallery/shop-kids.jpg.webp");
 }
 @media (min-width: 1440px) {
   #gallery ul #g3 {
+    display: list-item;
     grid-area: g3;
   }
 }
@@ -611,13 +805,13 @@ footer > div #f3 ul li {
   #new > div {
     grid-area: new;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
+    grid-template-areas: "nt nt nt nt" "n1 n1 n2 n2" "n3 n3 n4 n4" ".. n5 n5 ..";
   }
 }
 @media (min-width: 1024px) {
   #new > div {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "n1 n1 n2 n2 n3 n3" ". n4 n4 n5 n5 .";
+    grid-template-areas: "nt nt nt nt nt nt" "n1 n1 n2 n2 n3 n3" ".. n4 n4 n5 n5 ..";
   }
 }
 @media (min-width: 768px) {

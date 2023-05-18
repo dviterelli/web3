@@ -1,51 +1,64 @@
-/* =============
-   Gallery
-============= */
-
 #gallery{
-   @include lg{
-       display: grid;
-       grid-template-columns: 16px auto 16px;
-       grid-template-areas: ". gallery .";
-   }
+    @include lg{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". gallery .";
+    }
 
-   @include xxl{
-       grid-template-columns: auto 1200px auto;
-   }
+    @include xxl{
+        grid-template-columns: auto 1200px auto;
+    }
 
-   ul{
-       @include md{
-           grid-area: gallery;
-           display: grid;
-           grid-template-columns: 50% auto;
-       }
+    ul{
 
-       @include lg{
-           grid-template-columns: 60% auto;
-       }
+        display: grid;
+        grid-template-rows: 50vh 76vh;
 
-       @include xxl{
-           grid-template-areas: 
-           "g1 g2"
-           "g1 g3";
-       }
+        @include md{
+            grid-area: gallery;
+            grid-template-columns: 50% auto;
+            grid-template-rows: 50vh;
+        }
 
-       #g1{
-           @include xxl{
-               grid-area: g1;
-           }
-       }
+        @include lg{
+            grid-template-columns: 60% auto;
+        }
 
-       #g2{
-           @include xxl{
-               grid-area: g2;
-           }
-       }
+        @include xxl{
+            // grid-template-rows: 40vh 40vh;
+            grid-template-rows: repeat(2, 30vh);
+            grid-template-areas: 
+            "g1 g2"
+            "g1 g3";
+        }
 
-       #g3{
-           @include xxl{
-               grid-area: g3;
-           }
-       }
-   }
+        li{
+            background-size: cover;
+            background-position: center;
+        }
+
+        #g1{
+            background-image: url("../img/gallery/shop-mens.jpg.webp");
+            @include xxl{
+                grid-area: g1;
+            }
+        }
+
+        #g2{
+            background-image: url("../img/gallery/shop-womens.jpg.webp");
+            @include xxl{
+                grid-area: g2;
+                background-position: center;
+            }
+        }
+
+        #g3{
+            display: none;
+            background-image: url("../img/gallery/shop-kids.jpg.webp");
+            @include xxl{
+                display: list-item;
+                grid-area: g3;
+            }
+        }
+    }
 }

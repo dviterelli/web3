@@ -1,3 +1,27 @@
 /* =============
     Buttons
 ============= */
+.red-link:link, .red-link:visited {
+    background-color: var(--red-dark);
+    color: white;
+    padding: 8px 16px;
+    display: inline-block;
+    transition: 0.25s;
+
+    &:hover{
+        background-color: var(--red-light);
+    }
+}
+
+.red-button{
+    background-color: var(--red-dark);
+    color: white;
+    padding: 8px 16px;
+    display: inline-block;
+    transition: 0.25s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--red-light);
+    }
+}

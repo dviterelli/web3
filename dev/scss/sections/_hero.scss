@@ -4,53 +4,180 @@
 
 #hero{
 
-   img{
-       font-size: 0;
-       display: block;
-   }
+    #hero-img{
+        background-image: url("../img/hero/vivo-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
 
-   #hero-bottom{
+        @include md{
+            height: 50vh;
+        }
 
-       @include md{
-           display: grid;
-           grid-template-columns: 40% auto;
-       }
+        @include xl{
+            background-position: center 80%;
+            height: 65vh;
+        }
 
-       @include lg{
-           grid-template-columns: 50% auto;
-       }
+        @include xxl{
+            height: 70vh;
+        }
+    }
 
-       .hero-bottom-card{
-           display: grid;
-           grid-template-columns: 16px auto 16px;
-           grid-template-areas: ". hero-sub .";
-           padding: 16px 0;
+    #hero-bottom{
 
-           >div{
-               grid-area: hero-sub;
-               display: flex;
-               align-items: center;
+        @include md{
+            display: grid;
+            grid-template-columns: 40% auto;
+        }
 
-               aside{
-                   margin-left: auto;
+        @include lg{
+            grid-template-columns: 50% auto;
+        }
 
-                   a{
-                       display: flex;
-                   }
-               }
-           }
-       }
+        .hero-bottom-card{
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". hero-sub .";
+            color: white;
+            padding: 16px 0;
 
-       #hero-bottom-left{
-           @include xxl{
-               grid-template-columns: 20% auto 16px;
-           }
-       }
+            >div{
+                grid-area: hero-sub;
+                display: flex;
+                align-items: center;
 
-       #hero-bottom-right{
-           @include xxl{
-               grid-template-columns: 16px auto 20%;
-           }
-       }
-   }
+                aside{
+                    margin-left: auto;
+
+                    a:link, a:visited{
+                        display: flex;
+                        color: white;
+                        transition: 0.25s;
+
+                        &:hover, &:active{
+                            color: var(--red-dark);
+                        }
+                    }
+                }
+            }
+        }
+
+        #hero-bottom-left{
+            background-color: var(--red-dark);
+            @include xxl{
+                grid-template-columns: 30% auto 16px;
+            }
+
+            h1{
+                font-size: rme-calc(18);
+                margin-bottom: 8px;
+
+                @include xl{
+                    font-size: rme-calc(25);
+                }
+            }
+
+            p{
+                font-weight: 600;
+                font-size: rme-calc(14);
+
+                @include xl{
+                    font-size: rme-calc(18);
+                }
+            }
+        }
+
+        #hero-bottom-right{
+            background-color: var(--red-light);
+            @include xxl{
+                grid-template-columns: 16px auto 30%;
+            }
+
+            h3{
+                font-weight: 400;
+                font-size: rem-calc(16);
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    
+}
+#sub-hero{
+    @include md{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". sub-hero-cards .";
+
+        @include xxl{
+            grid-template-columns: auto 1200px auto;
+        }
+    }
+    >div{
+        display: grid;
+        gap: 16px;
+        
+        @include md{
+            grid-area: sub-hero-cards;
+            grid-template-columns: 50% auto;
+        }
+
+        .sub-hero-card{
+            background-color: var(--black);
+            padding: 16px;
+            color: white;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 1px 1px rgba(42, 48, 54, 0.296793);
+
+            h1{
+                font-size: rem-calc(22);
+                font-weight: 400;
+
+                @include md{
+                    font-size: rem-calc(30);
+                }
+            }
+
+            a{
+                margin-top: 8px;
+            }
+
+            aside{
+                margin-left: auto;
+                width: 35%;
+
+                @include sm{
+                    width: 25%;
+                }
+
+                @include xl{
+                    width: 20%;
+                }
+
+                >div{
+                    background-position: center;
+                    background-size: cover;
+                    width: 100%;
+                    padding-bottom: 100%;
+                    border-radius: 100%;
+                    border: 3px solid white;
+                    overflow: hidden;
+                }
+
+                #sub-left-img{
+                    background-image: url("../img/hero/foot-tool.webp");
+                }
+                
+
+
+                #sub-right-img{
+                    background-image: url("../img/hero/why.Webp");
+                }
+            }
+        }
+    }
+    
 }

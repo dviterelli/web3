@@ -5,34 +5,36 @@ ul{
     margin: 0;
     padding: 0;
     li{
-        list-style: none
+        list-style: none;
     }
 }
 
+.content-space-top{
+    margin-top: 16px;
 
+    @include md{
+        margin-top: 24px;
+    }
 
-.header-footer-grid{
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". header-footer . ";
- 
-    >div{
-        grid-area: header-footer;
+    @include lg{
+        margin-top: 30px;
     }
 }
 
-.hero-sub-images{
-    width: 15%;
-}
-
-.large-images{
-    width: 100%;
-}
-
-.show-large {
+.show-large{
     display: none;
-
     @include lg{
         display: block;
     }
+}
+
+.show-extra-large{
+    display: none;
+    @include xxl{
+        display: block;
+    }
+}
+
+.test-imgs{
+    width: 100%;
 }

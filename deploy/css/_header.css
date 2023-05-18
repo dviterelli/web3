@@ -9,6 +9,9 @@ header #logo-nav {
 header #logo-nav > div {
   grid-area: logo-nav;
 }
+header #logo-nav > div img {
+  width: 300px;
+}
 header #search {
   display: grid;
   grid-template-columns: 16px auto 16px;
